@@ -23,8 +23,8 @@ export class MemberFormComponent implements OnInit {
   saveRecord(){
 
     this.member = new Member();
-    this.member.name = this.formGroup.get('name').value;
-    this.member.dni = this.formGroup.get('dni').value;
+    this.member.name = this.formGroup.get('_name').value;
+    this.member.dni = this.formGroup.get('_dni').value;
 
     this.enviar.emit(this.member);
   }

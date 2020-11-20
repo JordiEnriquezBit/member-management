@@ -1,5 +1,5 @@
 export interface Member {
-name?:string;
-dni?:string;
+_name?:string;
+_dni?:string;
 }
 

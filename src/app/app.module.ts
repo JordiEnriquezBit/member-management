@@ -1,5 +1,6 @@
+import { MaterialModule } from './shared/material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { MemberFormModule } from './member-form/member-form.module';
 import { GlobalModule } from './global/global.module';
 
 @NgModule({
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA ],
   declarations: [
     AppComponent
   ],
@@ -19,7 +22,8 @@ import { GlobalModule } from './global/global.module';
     BrowserAnimationsModule,
     GlobalModule,
     MemberFormModule,
-    MemberManagementModule
+    MemberManagementModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,2 @@
-import { Member } from '../interfaces/member';
-export const members: Member[]=[ {
-  name:'John',
-  dni:'123456789'
-}]
+import { Member } from '../classes/member';
+export const members: Member[]=[ new Member("jordi","1233456")]

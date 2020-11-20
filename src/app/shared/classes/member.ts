@@ -1,8 +1,11 @@
 export class Member {
   private _name:string;
-  private _dni:string;
+  private _dni:String;
 
-  constructor(){};
+  constructor(name?:string,dni?:String){
+    this.name = name;
+    this.dni = dni;
+  };
 
   public get name(){
     return this._name;

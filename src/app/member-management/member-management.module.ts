@@ -1,3 +1,4 @@
+import { MaterialModule } from './../shared/material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MemberManagementComponent } from './member-management/member-management.component';
@@ -12,7 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     MemberFormModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule
   ],
   exports: [MemberManagementComponent]
 })

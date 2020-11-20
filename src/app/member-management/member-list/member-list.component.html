@@ -1,9 +1,23 @@
-<div *ngFor='let member of members'>
-  <p>{{member.name}}</p>
-  <p>{{member.dni}}</p>
-  <button (click)="deleteMember(member)">Eliminar</button>
- <!-- <button (click)="edit(member)">Editar</button>-->
-</div>
+<div>
+  <mat-accordion  >
+<ng-container *ngFor='let member of members'>
+  <mat-expansion-panel hideToggle (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false">
+    <mat-expansion-panel-header (click)="changeMemberToEdit(member)">
 
-<app-member-form></app-member-form>
+      <button mat-raised-button  (click)="deleteMember(member)">Eliminar</button>
+
+ <mat-panel-description>
+   <div>
+  <p>Name: {{member.name}} <br>  DNI: {{member.dni}}</p>
+</div>
+ <!-- <button (click)="edit(member)">Editar</button>-->
+ </mat-panel-description>
+</mat-expansion-panel-header>
+<app-member-form [formGroup]='formGroup2' (enviar)="editMember($event)"></app-member-form>
+</mat-expansion-panel>
+</ng-container>
+</mat-accordion>
+
+</div>
 
