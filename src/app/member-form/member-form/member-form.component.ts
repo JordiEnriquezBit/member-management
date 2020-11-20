@@ -18,6 +18,7 @@ export class MemberFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
   saveRecord(){
 

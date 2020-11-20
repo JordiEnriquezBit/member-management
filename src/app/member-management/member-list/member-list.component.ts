@@ -1,5 +1,6 @@
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Member } from '../../shared/classes/member';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-member-list',
@@ -8,10 +9,20 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MemberListComponent implements OnInit {
 @Input() members: Member[];
+ @Output() delete = new EventEmitter<Member>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  deleteMember(memberToDelete){
+    this.delete.emit(memberToDelete);
+  }
+/*
+  edit(member){
+    this.formGroup.setValue(member);
+  }*/
+
 
 }

@@ -1,5 +1,9 @@
 <div *ngFor='let member of members'>
   <p>{{member.name}}</p>
   <p>{{member.dni}}</p>
+  <button (click)="deleteMember(member)">Eliminar</button>
+ <!-- <button (click)="edit(member)">Editar</button>-->
 </div>
+
+<app-member-form></app-member-form>
 

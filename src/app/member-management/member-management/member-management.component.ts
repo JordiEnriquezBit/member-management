@@ -26,5 +26,8 @@ export class MemberManagementComponent implements OnInit {
   recibir(member){
     this.members.push(member);
   }
-
+  deleteMember(memberToDelete){
+    let index = this.members.findIndex(member => member.dni == memberToDelete.dni);
+    this.members.splice(index, 1);
+  }
 }
